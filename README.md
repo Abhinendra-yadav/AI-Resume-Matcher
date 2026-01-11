@@ -30,3 +30,6 @@ cd frontend
 npm install
 npm install axios
 npm start
+
+<img width="991" height="757" alt="Screenshot 2026-01-11 044257" src="https://github.com/user-attachments/assets/79adfb32-86e1-468c-94d6-f152fbbabb97" />
+
