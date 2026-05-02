@@ -72,7 +72,7 @@ async def match_resume(job_description: str = Form(...), file: UploadFile = File
         score = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
         match_percentage = round(score * 100, 2)
 
-        # Keyword Gap Analysis
+        # Technology Keyword Bank
         tech_keywords = [
             "python", "java", "react", "sql", "html", "css", "javascript", 
             "c++", "node", "aws", "docker", "git", "api", "fastapi", "mongodb",
@@ -82,12 +82,15 @@ async def match_resume(job_description: str = Form(...), file: UploadFile = File
         job_lower = job_description.lower()
         resume_lower = resume_text.lower()
         
+        # Gap Analysis: Categorize present vs. missing skills
+        matched = [word.upper() for word in tech_keywords if word in job_lower and word in resume_lower]
         missing = [word.upper() for word in tech_keywords if word in job_lower and word not in resume_lower]
         
         # Return structured data to the Frontend
         return {
             "match_score": match_percentage,
-            "missing_keywords": missing,
+            "matched_keywords": matched,  # Displays strengths
+            "missing_keywords": missing,  # Displays areas for improvement
             "extracted_preview": resume_text[:200] + "..."
         }
 
