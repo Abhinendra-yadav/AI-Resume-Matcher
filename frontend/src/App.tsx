@@ -18,7 +18,7 @@ function App() {
     formData.append('job_description', jobDesc);
 
     try {
-      const response = await axios.post('http://localhost:8000/match', formData);
+     const response = await axios.post("https://ai-resume-matcher-mrcl.onrender.com/match", formData);
       setResult(response.data);
     } catch (error) {
       alert("Backend error! Make sure Python main.py is running.");
