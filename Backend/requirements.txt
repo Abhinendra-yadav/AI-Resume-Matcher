@@ -6,3 +6,4 @@ openai
 scikit-learn
 pypdf
 python-dotenv
+python-docx
