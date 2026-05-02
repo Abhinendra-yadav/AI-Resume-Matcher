@@ -1,13 +1,13 @@
 # AI-Resume-Matcher
 # 🚀 AI Resume Matcher & Skill Gap Analyzer
 
-Ek modern Full-Stack application jo candidates ki help karti hai unke resume ko Job Descriptions ke saath match karne mein. Yeh app AI ka use karke match score aur missing keywords batati hai.
+A modern full-stack application that helps candidates match their resumes with job descriptions. The app uses AI to calculate a match score and identify missing keywords.
 
 ## ✨ Features
-- **PDF Text Extraction:** Resume (PDF) se saara text extract karta hai.
-- **NLP Matching:** Scikit-learn ke `TF-IDF` aur `Cosine Similarity` ka use karke accurate match percentage nikalta hai.
-- **Skill Gap Analysis:** Job Description mein se un keywords ko dhundta hai jo aapke resume mein missing hain.
-- **Modern UI:** Clean aur responsive interface React aur TypeScript ke saath.
+ -PDF Text Extraction: Extracts all text from resume PDFs.
+  NLP Matching: Uses TF-IDF and Cosine Similarity (via Scikit-learn) to calculate an accurate match percentage.
+  Skill Gap Analysis: Identifies keywords present in the job description but missing from the resume.
+  Modern UI: Clean and responsive interface built with React and TypeScript.
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, TypeScript, Axios
